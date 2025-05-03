@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevOps Genius | AI Assistant</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <div class="logo-container">
+        <i class="fas fa-robot logo-icon"></i>
+        <h1>DevOps Genius</h1>
+      </div>
+      <div class="status-indicator">
+        <span class="status-dot"></span>
+        <span class="status-text">Online</span>
+      </div>
+    </header>
+
+    <div class="chat-container">
+      <div id="chat-box">
+        <div class="welcome-message">
+          <div class="bot-avatar">
+            <i class="fas fa-robot"></i>
+          </div>
+          <div class="welcome-content">
+            <h3>Hello! I'm your DevOps Assistant</h3>
+            <p>Ask me anything about Docker, Kubernetes, CI/CD, Cloud, and more!</p>
+            <div class="quick-questions">
+              <p>Try asking:</p>
+              <ul>
+                <li onclick="insertQuestion(this)">How to deploy a Docker container?</li>
+                <li onclick="insertQuestion(this)">What is Kubernetes?</li>
+                <li onclick="insertQuestion(this)">Best practices for CI/CD</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="input-container">
+        <div class="input-area">
+          <input type="text" id="user-input" placeholder="Ask me anything about DevOps..." autocomplete="off" />
+          <button id="send-btn" onclick="sendMessage()">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+        <div class="hints">
+          <span>Press Enter to send</span>
+          <span>Shift+Enter for new line</span>
+        </div>
+      </div>
+    </div>
+
+    <footer class="app-footer">
+      <p>© 2023 DevOps Genius | AI Assistant</p>
+      <div class="footer-links">
+        <a href="#"><i class="fas fa-info-circle"></i> About</a>
+        <a href="#"><i class="fas fa-cog"></i> Settings</a>
+        <a href="#"><i class="fas fa-history"></i> History</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
